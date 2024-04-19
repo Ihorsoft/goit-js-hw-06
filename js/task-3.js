@@ -8,7 +8,7 @@ class StringBuilder {
     return this.#value;
   }
  
-padEnd() {
+padEnd(str) {
   this.#value += str;
 }
 
@@ -28,9 +28,9 @@ padBoth(str) {
 
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+builder.padStart("^");           //      перевірка методу padStart() ініціалідація 
+console.log(builder.getValue()); // "^." перевірка методу padStart() візуалізація
+builder.padEnd("^");             //       перевірка методу padEnd() ініціалізація 
+console.log(builder.getValue()); // "^.^" перевірка методу padEnd() візуалізація
+builder.padBoth("=");            //        перевірка методу padBoth() ініціалізація
+console.log(builder.getValue()); // "=^.^=" перевірка методу padBoth() візуалізація
